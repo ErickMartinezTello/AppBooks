@@ -1,4 +1,14 @@
-.first-title{
-    display: flex;
-    justify-content: center;
+header{
+    display: fixed;
+}
+.menu-items a {
+ color: black;
+ margin-right: 5px;
+ padding: 20px;
+}
+.menu-items a:hover{
+    color: indigo;
+}
+.menu-items span{
+    color: greenyellow;
 }
