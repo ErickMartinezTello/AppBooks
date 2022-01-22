@@ -8,7 +8,9 @@ class Book{
     }
 }
 class Library{
-    constructor(){
+    //const es para valores que van a cambiar de valor en mi còdigo
+    //let es para valores que NO cambiaràn de valor en mi còdigo 
+    const getBooks(){
         if(localStorage.getItem('books') == null){
             this.books= [];
 
@@ -16,13 +18,18 @@ class Library{
             this.books = JSON.parse(localStorage.getItem('books'));
         }
     }
-    addBook = (book) => {
+    const addBook = (book) => {
         this.books.push(book); //push pasa el contenido de un arreglo a otro
         localStorage.setItem('books', JSON.stringify(this.books)); //stringify pasa de json a string
         //books es una variable que se actualiza con setItem en forma de string 
-
+        //setItem es para actualizar los valores del localStorage 
+        //innerHTML es para ingresar codigo html desde js 
+        //window hace referencia a que voy a ingresar a la pagina por medio de funciones 
+        //new es para instanciar un objeto 
+        //target es para direccionar un evento 
+        //previousElementSibling es para recorrer en el html los elementos al ser eliminados 
     }
-    createTable = (book) => {
+    const createTable = (book) => {
         const table = document.createElement('table');
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -31,10 +38,10 @@ class Library{
           table.appendChild(tr);
     }
 
-    displayBooks = () => {
+    const displayBooks = () => {
         this.books.forEach((book) => {
           this.createTable(book);
         })
     }
-
 }
+window.addEventListener("DOMContentLoaded", () => );
